@@ -1,0 +1,66 @@
+.container {
+    margin: 3rem;
+    .products-title {
+        color: #3f51b5;
+    }
+
+    .add-product-button{
+        margin-bottom: 20px;
+    }
+
+    .mat-form-field {
+        font-size: 14px;
+        width: 99%;
+        margin: 0.5rem 0.5rem 0 0.5rem;
+        @media screen and (max-width: 768px) {
+            width: 98%;
+        }
+        @media screen and (max-width: 425px) {
+            width: 95%;
+        }
+      }
+
+    table {
+        width: 100%;
+        th {
+            color: #3f51b5;
+        }
+        @media screen and (max-width: 768px) {
+            td,
+            th {
+                font-size: 0.8rem;
+                mat-icon {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        @media screen and (max-width: 425px) {
+            td {
+                font-size: 0.6rem;
+                mat-icon {
+                    font-size: 1rem;
+                }
+            }
+    
+            th {
+                font-size: 0.7rem;
+            }
+            .title {
+                display: inline-block;
+                width: 5rem;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        margin: 3rem 2rem;
+    }
+
+    @media screen and (max-width: 425px) {
+        margin: 2rem 1rem;
+    }
+}
+

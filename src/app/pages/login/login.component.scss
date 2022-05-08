@@ -1,0 +1,33 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50vh;
+    height: 100vh;
+    justify-content: center;
+    .title {
+        color: #3f51b5;;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    .login-form {
+        display: flex;
+        flex-direction: column;
+    }
+    .eye-icon {
+        color: #979797;
+    }
+
+    .mat-checkbox-inner-container {
+        margin: auto;
+        margin-top: 4px;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap {
+        border-width: 0px;
+    }
+
+    button {
+        margin-top: 20px;
+    }
+}

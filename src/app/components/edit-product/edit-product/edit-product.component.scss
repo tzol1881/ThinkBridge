@@ -1,0 +1,22 @@
+.component-flex-setting{
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-product-form-container {
+    @extend .component-flex-setting;
+    padding: 10px 20px 20px 20px;
+    .products-title {
+        color: #3f51b5;
+    }
+    .edit-product-form{
+        @extend .component-flex-setting;
+        .button-container{
+            display: flex;
+            justify-content: flex-end;
+            button:first-child{
+                margin-right: 5px;
+            }
+        }
+    }
+}

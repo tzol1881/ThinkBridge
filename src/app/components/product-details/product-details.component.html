@@ -1,0 +1,22 @@
+<mat-dialog-content class="mat-typography product-details-container">
+    <div class="image-container">
+        <img [src]="productDetails.image" alt="No image available"/>
+    </div>
+    <div class="pruduct-details">
+        <h2>{{productDetails.title}}</h2>
+        <div>{{productDetails.description}}</div>
+        <div class="rating" (mouseover)="tooltip.show()" (mouseout)="tooltip.hide()">
+            <mat-icon class="star-icon" *ngFor="let star of ratingArr">{{showIcon(star)}}</mat-icon>
+            <div class="hiddenTooltip" matTooltipPosition="after" matTooltipClass="my-tooltip"
+                matTooltip="{{getRatingToolTipText()}}" #tooltip="matTooltip">
+            </div>
+        </div>
+        <div class="price"><span>&#8377;</span>{{productDetails.price}}</div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button *ngIf="isUser()" mat-button color="primary" [mat-dialog-close]="true" matTooltip="Add to Cart" cdkFocusInitial (click)="addToCart(productDetails)">
+        <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+</mat-dialog-actions>

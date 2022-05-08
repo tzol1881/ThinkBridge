@@ -1,0 +1,7 @@
+<div class="nav-bar">
+    <div class="title">ShopBridge</div>
+    <div class="links">
+      <div *ngIf="isUser()"><button mat-icon-button matTooltip="View Cart"><span class="material-icons" (click)="viewCart()">shopping_cart</span></button></div>
+      <div><button mat-icon-button matTooltip="Logout"><span class="material-icons" (click)="logout()">logout</span></button></div>
+    </div>
+  </div>

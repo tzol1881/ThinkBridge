@@ -1,0 +1,23 @@
+<div class="edit-product-form-container">
+    <h3 class="products-title">Edit Product</h3>
+    <form class="edit-product-form" [formGroup]="editProduct" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline">
+            <mat-label>Product Name</mat-label>
+            <input matInput type="email" formControlName="title">
+            <mat-error>Required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <input matInput type="text" formControlName="description">
+            <mat-error>Required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input matInput type="number" formControlName="price">
+        </mat-form-field>
+        <div class="button-container">
+            <button type="button" (click)="onCancel()" mat-stroked-button color="primary">Cancel</button>
+            <button type="submit" mat-stroked-button color="primary" [disabled]="!editProduct.valid">Save</button>
+        </div>
+    </form>
+</div>
